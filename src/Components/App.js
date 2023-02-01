@@ -12,11 +12,14 @@ function App() {
         <li>
           <Link to ="/login">Login</Link>
         </li>
+        <li>
+          <Link to ="/signup">Signup</Link>
+        </li>
       </ul>
       <Routes>
 <Route index element={<NotesPage}/>
 <Route path="/login" element={<LoginPage/>}/>
-
+<Route path="/signup" element={<SignupPage/>}/>
       </Routes>
         <NotesPage />
       </BrowserRouter>

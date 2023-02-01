@@ -1,10 +1,18 @@
 import React from "react";
-
+import {useNavigate} from "react-router-dom";
 export default function LoginForm() {
   const state = authStore();
+const navigate = useNavigate()
+  const handleLogin = (e) => {
+    e.preventDefault();
+    await store.login();
+
+    // NAvigate
+    navigate("/")
+  };
 
   return (
-    <form>
+    <form onSubmit={handleLogin}>
       <input
         onChange={store.updateLoginForm}
         value={Store.loginForm.email}
