@@ -15,6 +15,9 @@ function App() {
         <li>
           <Link to ="/signup">Signup</Link>
         </li>
+        <li>
+          <Link to ="/Logout">Signup</Link>
+        </li>
       </ul>
       <Routes>
 <Route index element={<NotesPage}/>

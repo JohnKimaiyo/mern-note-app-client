@@ -44,6 +44,11 @@ const authStore = create((set) => ({
 
     const res = await axios.post('/signup',signupForm,{withCredentials:true})
     console.log(res);
+
+    logout:async axios () =>{
+      axios.get('/logout',{withCredentials:true})
+      set({loggedIn:false});
+    }
   }
 }));
 
